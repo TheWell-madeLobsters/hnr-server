@@ -4,6 +4,7 @@
   "description": "This is the back-end service for SitSense",
   "main": "main.js",
   "dependencies": {
+    "couchbase": "^2.1.6",
     "express": "^4.13.4"
   },
   "devDependencies": {},
