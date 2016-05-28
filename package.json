@@ -1,0 +1,23 @@
+{
+  "name": "hnr-server",
+  "version": "0.0.1",
+  "description": "This is the back-end service for SitSense",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheWell-madeLobsters/hnr-server.git"
+  },
+  "author": "The Well-made Lobsters",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheWell-madeLobsters/hnr-server/issues"
+  },
+  "homepage": "https://github.com/TheWell-madeLobsters/hnr-server#readme"
+}
