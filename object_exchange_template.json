@@ -2,7 +2,7 @@
     "timestamp": 123456789,
     "car_data" : {
         "plate" : "ABC-123-ABD",
-        "drive_license" : "abc1234abc"
+        "driving_license" : "abc1234abc"
     },
     "user_id" : 125648987984151,
     "geotag": {
