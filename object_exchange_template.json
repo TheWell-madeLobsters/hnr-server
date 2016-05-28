@@ -1,0 +1,15 @@
+{
+    "timestamp": 123456789,
+    "car_data" : {
+        "plate" : "ABC-123-ABD",
+        "drive_license" : "abc1234abc"
+    },
+    "user_id" : 125648987984151,
+    "geotag": {
+        "lat": 45.58,
+        "lon": 78.85
+    },
+    "inst_speed" : 120.5,
+    "heart_rate" : 75,
+    "weight_distribution" : [78, 55, 78, 78, 52, 52, 12, 32, 32]
+}
