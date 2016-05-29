@@ -50,7 +50,8 @@ app.post(SIT_SENSE_ROOT + "/dati_sedile", function(req, res) {
             console.error("Errore durante l'inserimento di un oggetto su DB. Messaggio: " + err);
         }
 
-        console.log("Dati salvati");
-        res.sendStatus(200);
+        console.log("Dati salvati " + res);
+
     });
+    res.sendStatus(200);
 });
