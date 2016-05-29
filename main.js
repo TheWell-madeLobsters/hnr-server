@@ -1,7 +1,7 @@
 // Inclusione dipendenze
 var express = require('express'); // express framework per web app
 var bodyParser = require('body-parser'); // parser per json
-// var couchbase = require("couchbase"); // couchbase driver
+var couchbase = require("couchbase"); // couchbase driver
 
 // Costanti
 var SIT_SENSE_ROOT = "/sit_sense";
