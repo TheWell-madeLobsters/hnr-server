@@ -14,6 +14,9 @@ var app = express();
 app.use(bodyParser.json()); // per attivare il parsing json
 app.disable('x-powered-by'); // impostazione di sicurezza per header
 
+app.use("/assets",express.static(path.join(__dirname, "assets")));
+app.use("/images",express.static(path.join(__dirname, "images")));
+
 // Connessione Couchbase
 var cluster = new couchbase.Cluster("couchbase://40.69.29.211"); // couchbase e' sulla stessa macchina
 var bucket = cluster.openBucket("sit-sense", function(err) {
@@ -30,6 +33,7 @@ var bucket = cluster.openBucket("sit-sense", function(err) {
 });
 
 // Definizione API
+
 // Root
 app.get(SIT_SENSE_ROOT, function(req, res) {
     res.sendFile(__dirname + "/index.html");
