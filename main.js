@@ -32,7 +32,7 @@ var bucket = cluster.openBucket("sit-sense", function(err) {
 // Definizione API
 // Root
 app.get(SIT_SENSE_ROOT, function(req, res) {
-    res.sendFile("index.html");
+    res.sendFile(__dirname + "/index.html");
 });
 
 // Status
