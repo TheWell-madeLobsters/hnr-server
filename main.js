@@ -48,15 +48,13 @@ app.post(SIT_SENSE_ROOT + "/dati_sedile", function(req, res) {
         return res.sendStatus(400);
     }
 
-    bucket.upsert(req.body.timestamp + "-" + req.body.user_id, req.body, function(err, res) {
+    bucket.upsert(req.body.timestamp + "-" + req.body.user_id, req.body, function(err, response) {
         if(err) {
             console.error("Errore durante l'inserimento di un oggetto su DB. Messaggio: " + err);
             return;
         } else {
-            res.send("OK");
+                console.log("Dati salvati");
+            res.sendStatus(200);
         }
-
-        console.log("Dati salvati");
-
     });
 });
