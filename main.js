@@ -4,7 +4,7 @@ var bodyParser = require('body-parser'); // parser per json
 var couchbase = require("couchbase"); // couchbase driver
 
 // Costanti
-var SIT_SENSE_ROOT = "/";
+var SIT_SENSE_ROOT = "/sit_sense";
 var SIT_SENSE_PORT = 3000;
 var SIT_SENSE_USERNAME = "sit-sense";
 var SIT_SENSE_PASSWORD = "g2YL8PIGEyeXE8MheKLE"
@@ -14,8 +14,8 @@ var app = express();
 app.use(bodyParser.json()); // per attivare il parsing json
 app.disable('x-powered-by'); // impostazione di sicurezza per header
 
-app.use("/assets",express.static(__dirname + "/assets"));
-app.use("/images",express.static(__dirname + "/images"));
+app.use(SIT_SENSE_ROOT + "/assets",express.static(__dirname + "/assets"));
+app.use(SIT_SENSE_ROOT + "/images",express.static(__dirname + "/images"));
 
 console.log(__dirname + "/assets and " + __dirname + "/images");
 
