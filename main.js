@@ -4,7 +4,7 @@ var bodyParser = require('body-parser'); // parser per json
 // var couchbase = require("couchbase"); // couchbase driver
 
 // Costanti
-var SIT_SENSE_ROOT = "/sit-sense";
+var SIT_SENSE_ROOT = "/sit_sense";
 var SIT_SENSE_PORT = 3000;
 var SIT_SENSE_USERNAME = "sit-sense";
 var SIT_SENSE_PASSWORD = "g2YL8PIGEyeXE8MheKLE"
@@ -37,7 +37,7 @@ app.listen(3000, function () {
 });
 
 // // Connessione Couchbase
-// var cluster = new couchbase.Cluster("couchbase://138.91.61.209"); // couchbase e' sulla stessa macchina
+// var cluster = new couchbase.Cluster("couchbase://40.69.29.211"); // couchbase e' sulla stessa macchina
 // var bucket = cluster.openBucket("sit-sense", function(err) {
 //     if(err) {
 //         console.error("Errore durante il tentativo di connessione al DB. Messaggio: " + err);
