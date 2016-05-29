@@ -44,14 +44,19 @@ app.get(SIT_SENSE_ROOT + "/status", function(req, res) {
 // Ricezione dati sedile
 app.post(SIT_SENSE_ROOT + "/dati_sedile", function(req, res) {
     console.log("Richiesta ricezione dati ricevuta, contenuto: " + JSON.stringify(req.body));
+    if (!req.body) {
+        return res.sendStatus(400);
+    }
 
-    bucket.insert(req.body.timestamp + "-" + req.body.user_id, req.body, function(err, res) {
+    bucket.upsert(req.body.timestamp + "-" + req.body.user_id, req.body, function(err, res) {
         if(err) {
             console.error("Errore durante l'inserimento di un oggetto su DB. Messaggio: " + err);
+            return;
+        } else {
+            res.send("OK");
         }
 
-        console.log("Dati salvati " + res);
+        console.log("Dati salvati");
 
     });
-    res.sendStatus(200);
 });
