@@ -4,12 +4,13 @@
   "description": "This is the back-end service for SitSense",
   "main": "main.js",
   "dependencies": {
+    "body-parser": "^1.15.1",
     "couchbase": "^2.1.6",
     "express": "^4.13.4"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
