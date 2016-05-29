@@ -14,8 +14,8 @@ var app = express();
 app.use(bodyParser.json()); // per attivare il parsing json
 app.disable('x-powered-by'); // impostazione di sicurezza per header
 
-app.use("/assets",express.static(path.join(__dirname, "assets")));
-app.use("/images",express.static(path.join(__dirname, "images")));
+app.use("/assets",express.static(__dirname + "assets"));
+app.use("/images",express.static(__dirname + "images"));
 
 // Connessione Couchbase
 var cluster = new couchbase.Cluster("couchbase://40.69.29.211"); // couchbase e' sulla stessa macchina
