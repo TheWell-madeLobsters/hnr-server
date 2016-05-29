@@ -48,9 +48,9 @@ app.post(SIT_SENSE_ROOT + "/dati_sedile", function(req, res) {
     bucket.insert(req.body.timestamp + "-" + req.body.user_id, req.body, function(err, res) {
         if(err) {
             console.error("Errore durante l'inserimento di un oggetto su DB. Messaggio: " + err);
-            res.sendStatus(500);
         }
 
+        console.log("Dati salvati");
         res.sendStatus(200);
     });
 });
