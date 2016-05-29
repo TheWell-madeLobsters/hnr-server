@@ -56,7 +56,7 @@ app.post(SIT_SENSE_ROOT + "/dati_sedile", function(req, res) {
     bucket.upsert(req.body.timestamp + "-" + req.body.user_id, req.body, function(err, response) {
         if(err) {
             console.error("Errore durante l'inserimento di un oggetto su DB. Messaggio: " + err);
-            return;
+            return res.sendStatus(500);
         } else {
                 console.log("Dati salvati");
             res.sendStatus(200);
